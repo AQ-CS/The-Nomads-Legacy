@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://3v37sbyvrs63"]
+
+[ext_resource type="Texture2D" uid="uid://cy1xi7015xvkp" path="res://Ninja Adventure - Asset Pack/Items/Food/SeedBig3.png" id="1_4t0wc"]
+[ext_resource type="Script" path="res://Scripts/apple.gd" id="1_c4e2g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1adk4"]
+radius = 60.0
+
+[node name="Apple" type="Area2D"]
+script = ExtResource("1_c4e2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1adk4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, -5)
+scale = Vector2(2.95313, 3.11178)
+texture = ExtResource("1_4t0wc")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -57.0
+offset_right = 20.0
+offset_bottom = -34.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

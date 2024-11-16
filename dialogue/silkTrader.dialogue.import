@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dqbgyg7mqrvgv"
+path="res://.godot/imported/silkTrader.dialogue-e004c45187371c060e3c54aea8b1489a.tres"
+
+[deps]
+
+source_file="res://dialogue/silkTrader.dialogue"
+dest_files=["res://.godot/imported/silkTrader.dialogue-e004c45187371c060e3c54aea8b1489a.tres"]
+
+[params]
+
+defaults=true

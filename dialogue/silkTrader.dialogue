@@ -1,0 +1,63 @@
+~ start
+Silk Trader: [[Assalamu Alaikum|Salam|Marhaba]], Welcome to my store!.
+Silk Trader: What would you like to do today?
+- Buy
+	Silk Trader: Buying! Great Choice!
+	Silk Trader: What would you like to buy? 
+	- Silk
+		Silk Trader: Silk! Thats what Im known for!
+		Silk Trader: 1 Piece of silk cost 2 gold pieces!
+		- Accept
+			if gold < 2:
+				Ibn Battuta: Looks like I dont have enough gold, maybe another time
+				Silk Trader: Thats alright! Come back again whenever you feel like!
+			elif gold >= 2:
+				Ibn Battuta: Sure I want 1 of your silk pieces
+				Silk Trader: Great trading with you! May Allah bless you!
+				set gold -= 2
+				set silk += 1
+		- Reject
+			Ibn Battuta: Maybe another time, Peace be upon you!
+			Silk Trader: Peace be upon you too!
+	- Spices
+		Silk Trader: Spices! You might be better of buying them from India, but if you are in a hurry
+		Silk Trader: 1 bag of Spices cost 3 gold pieces! 
+		- Accept
+			if gold < 3:
+				Ibn Battuta: Looks like I dont have enough gold, maybe another time
+				Silk Trader: Thats alright! Come back again whenever you feel like!
+			elif gold >= 3:
+				Ibn Battuta: Sure, I want 1 bag of spices please
+				Silk Trader: Great trading with you! May Allah bless you!
+		- Reject
+			Ibn Battuta: Maybe another time, Peace be upon you!
+			Silk Trader: Peace be upon you too!
+	- Cancel
+		Silk Trader: Another time then!
+		
+- Sell
+	Silk Trader: Selling! 
+	Silk Trader: Sure thing, what do you have?
+	- Silk for 1 gold piece
+		if silk < 1:
+			Ibn Battuta: Looks like I don't have that to sell.
+			Silk Trader: No worries! Come back when you have something to trade.
+		elif silk >= 1:
+			Silk Trader: I accept your trade for 1 gold piece!
+			Ibn Battuta: Here you go, may your trade flourish!
+			Silk Trader: Thank you! May Allah bless your journey!
+			set silk -= 1
+			set gold += 1
+	- Spices for 2 gold pieces
+		if spices < 1:
+			Ibn Battuta: Looks like I don't have that to sell.
+			Silk Trader: No worries! Come back when you have something to trade.
+		elif spices >= 1:
+			Silk Trader: I accept your trade for 2 gold pieces!
+			Ibn Battuta: Here you go, may your trade flourish!
+			Silk Trader: Thank you! May Allah bless your journey!
+			set spices -= 1
+			set gold += 2
+	- Cancel
+		Silk Trader: Another time then!
+=> END

@@ -1,0 +1,18 @@
+~ start
+Father: Assalamu Alaikum, my son. Are you ready for your journey? 
+if apple_status == "has":
+	Ibn Battuta: I have an apple with me, father.
+	- Give it to Father
+		set apple_status = "gave"
+		Ibn Battuta: Here you go, father. Please have it.
+		Father: Thank you, my son. A small token of kindness goes a long way.
+		set gold += 2
+	- Keep it
+		Ibn Battuta: I will keep it for the road ahead, father.
+		Father: That is wise, my son. You will need your strength for the journey.
+elif apple_status == "gave":
+	Father: Thank you again for the apple, my son. I pray it symbolizes the generosity you will show on your travels.
+else:
+	Father: You should find some provisions for your journey. There is an orchard nearby that might have apples.
+	
+=> END
