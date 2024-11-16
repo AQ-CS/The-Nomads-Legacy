@@ -85,8 +85,11 @@ func update_pages():
 		bookIcon.show()
 		spicesIcon.show()
 		silkIcon.show()
-		leftPage.text = "    Gold: " + str(State.gold) + "\n\n    Silk: " + str(State.silk) + "\n\n    Spices: " + str(State.spices)
+		leftPage.text = "    Gold: " + str(State.gold) + "\n\n    Silk: " + str(State.silk) + "\n\n    Spices: " + str(State.spices) + "\n\n    Books: " + str(State.books)
 		rHead.text = "Missions"
+		rightPage.text = "Talk to Father"
+		if State.mis1_status == "Complete":
+			rightPage.text += "\n\nTrade with Silk Trader Outside"
 	elif current_page == 2:
 		rightBtn.show()
 		goldIcon.hide()
