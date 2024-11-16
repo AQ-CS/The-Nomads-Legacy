@@ -12,6 +12,12 @@ extends Area2D
 @onready var silkIcon = $silk
 @onready var bookIcon = $books
 @onready var spicesIcon = $spices
+@onready var miss1Icon = $mission1
+@onready var miss2Icon = $mission2
+@onready var miss3Icon = $mission3
+@onready var miss4Icon = $mission4
+@onready var miss5Icon = $mission5
+@onready var miss6Icon = $mission6
 
 var is_open = false  # Tracks whether the book is open or not
 var current_page = 0  # Tracks the current page
@@ -30,6 +36,12 @@ func _ready():
 	silkIcon.hide()
 	bookIcon.hide()
 	spicesIcon.hide()
+	miss1Icon.hide()
+	miss2Icon.hide()
+	miss3Icon.hide()
+	miss4Icon.hide()
+	miss5Icon.hide()
+	miss6Icon.hide()
 
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):  # Toggle visibility with ui_cancel
@@ -85,17 +97,30 @@ func update_pages():
 		bookIcon.show()
 		spicesIcon.show()
 		silkIcon.show()
+		miss1Icon.show()
 		leftPage.text = "    Gold: " + str(State.gold) + "\n\n    Silk: " + str(State.silk) + "\n\n    Spices: " + str(State.spices) + "\n\n    Books: " + str(State.books)
 		rHead.text = "Missions"
-		rightPage.text = "Talk to Father"
+		rightPage.text = "    Give Father An Apple"
 		if State.mis1_status == "Complete":
 			rightPage.text += "\n\nTrade with Silk Trader Outside"
+			
+			# Access the AnimatedSprite2D and play the "completed" animation
+			var miss1_sprite = miss1Icon.get_node("AnimatedSprite2D")
+			if miss1_sprite:
+				miss1_sprite.play("completed")
+			
 	elif current_page == 2:
 		rightBtn.show()
 		goldIcon.hide()
 		silkIcon.hide()
 		bookIcon.hide()
 		spicesIcon.hide()
+		miss1Icon.hide()
+		miss2Icon.hide()
+		miss3Icon.hide()
+		miss4Icon.hide()
+		miss5Icon.hide()
+		miss6Icon.hide()
 		lHead.text = "Page 3"
 		rHead.text = "Page 4"
 		leftPage.text = ""
@@ -106,6 +131,12 @@ func update_pages():
 		bookIcon.hide()
 		spicesIcon.hide()
 		rightBtn.hide()
+		miss1Icon.hide()
+		miss2Icon.hide()
+		miss3Icon.hide()
+		miss4Icon.hide()
+		miss5Icon.hide()
+		miss6Icon.hide()
 		lHead.text = "Page 5"
 		rHead.text = "Page 6"
 		leftPage.text = ""

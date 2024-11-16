@@ -7,6 +7,7 @@ if apple_status == "has":
 		Ibn Battuta: Here you go, father. Please have it.
 		Father: Thank you, my son. A small token of kindness goes a long way.
 		set gold += 2
+		set mis1_status = "Complete"
 	- Keep it
 		Ibn Battuta: I will keep it for the road ahead, father.
 		Father: That is wise, my son. You will need your strength for the journey.

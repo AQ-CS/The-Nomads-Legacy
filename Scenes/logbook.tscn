@@ -232,7 +232,7 @@ animations = [{
 [node name="Logbook" type="Area2D"]
 z_index = 20
 script = ExtResource("1_c2hoe")
-metadata/_edit_vertical_guides_ = [74.0]
+metadata/_edit_vertical_guides_ = [85.0]
 
 [node name="btn_left" type="Label" parent="."]
 z_index = 21
@@ -277,7 +277,12 @@ offset_top = -139.0
 offset_right = 290.0
 offset_bottom = 62.0
 theme_override_fonts/font = ExtResource("3_vts5t")
-text = "Header 2"
+text = "    Header 2
+    2
+    3
+    4
+    5
+    6"
 
 [node name="left_head" type="Label" parent="."]
 z_index = 21
@@ -342,7 +347,7 @@ position = Vector2(-249, -88)
 scale = Vector2(0.105367, 0.0968333)
 sprite_frames = SubResource("SpriteFrames_kq2lw")
 autoplay = "default"
-frame_progress = 0.617737
+frame_progress = 0.533284
 
 [node name="books" type="Label" parent="."]
 offset_left = -256.0
@@ -355,7 +360,7 @@ position = Vector2(8, 43)
 scale = Vector2(0.22605, 0.22375)
 sprite_frames = SubResource("SpriteFrames_itac4")
 autoplay = "default"
-frame_progress = 0.544989
+frame_progress = 0.460541
 
 [node name="spices" type="Label" parent="."]
 offset_left = -237.0
@@ -368,7 +373,7 @@ position = Vector2(-11, -79)
 scale = Vector2(0.105712, 0.104607)
 sprite_frames = SubResource("SpriteFrames_uatd2")
 autoplay = "default"
-frame_progress = 0.826263
+frame_progress = 0.657369
 
 [node name="mission1" type="Label" parent="."]
 offset_left = 74.0
@@ -377,6 +382,7 @@ offset_right = 83.0
 offset_bottom = -109.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission1"]
+position = Vector2(11, 0)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
 
@@ -387,6 +393,7 @@ offset_right = 83.0
 offset_bottom = -109.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission2"]
+position = Vector2(11, 21)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
 
@@ -397,38 +404,39 @@ offset_right = 83.0
 offset_bottom = -109.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission3"]
+position = Vector2(11, 41)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
 
 [node name="mission4" type="Label" parent="."]
-offset_left = 74.0
-offset_top = -132.0
-offset_right = 83.0
-offset_bottom = -109.0
+offset_left = 155.0
+offset_top = -94.0
+offset_right = 164.0
+offset_bottom = -71.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission4"]
-position = Vector2(0, 58)
+position = Vector2(-70, 23)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
 
 [node name="mission5" type="Label" parent="."]
-offset_left = 74.0
-offset_top = -132.0
-offset_right = 83.0
-offset_bottom = -109.0
+offset_left = 114.0
+offset_top = -114.0
+offset_right = 123.0
+offset_bottom = -91.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission5"]
-position = Vector2(0, 39)
+position = Vector2(-29, 63)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
 
 [node name="mission6" type="Label" parent="."]
-offset_left = 74.0
-offset_top = -132.0
-offset_right = 83.0
-offset_bottom = -109.0
+offset_left = 156.0
+offset_top = -92.0
+offset_right = 180.0
+offset_bottom = -49.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="mission6"]
-position = Vector2(0, 19)
+position = Vector2(-71, 61)
 sprite_frames = SubResource("SpriteFrames_vrjnw")
 animation = &"ongoing"
