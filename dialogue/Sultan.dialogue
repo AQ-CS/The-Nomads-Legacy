@@ -1,0 +1,10 @@
+~ start
+set in_dialogue = true
+set mis4_status = "Complete"
+Sultan Muhammad bin Tughluq: Welcome, Ibn Battuta. You have traveled far to reach our court. Tell me, what do you seek in Hindustan?
+Ibn Battuta: Your Majesty, I seek only the chance to serve and to learn from the wisdom of your court. My journey has brought me here by Allah’s grace.
+Sultan Muhammad bin Tughluq: A traveler as well-versed as you carries the greatest gift of all—experience. We are honored by your presence.
+Ibn Battuta: It is I who am honored, Your Majesty, to stand in the court of a Sultan so renowned for his intellect and justice.
+Sultan Muhammad bin Tughluq: Then let your service match your reputation. I appoint you as our grand qadi. Serve this land with fairness, and you shall find favor in my eyes.
+set in_dialogue = false
+=> END

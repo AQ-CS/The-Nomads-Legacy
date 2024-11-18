@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://ddud5vgmrc4yu"
+path="res://.godot/imported/Sultan.dialogue-f1acdd8e7e98b24e2cddaead6bf25744.tres"
+
+[deps]
+
+source_file="res://dialogue/Sultan.dialogue"
+dest_files=["res://.godot/imported/Sultan.dialogue-f1acdd8e7e98b24e2cddaead6bf25744.tres"]
+
+[params]
+
+defaults=true

@@ -24,6 +24,10 @@ func _unhandled_input(event: InputEvent) -> void:
 			return
 		
 func _physics_process(delta):
+	if State.in_dialogue == true:
+		var anim = $AnimatedSprite2D
+		anim.play("Idle")
+		return
 	player_movement(delta)
 
 func player_movement(delta):

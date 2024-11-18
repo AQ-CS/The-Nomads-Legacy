@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://c5td2a2j5hail"
+path="res://.godot/imported/pilgrimage.dialogue-2c267dd6f54f7bb8e92f5b54c4a18b1a.tres"
+
+[deps]
+
+source_file="res://dialogue/pilgrimage.dialogue"
+dest_files=["res://.godot/imported/pilgrimage.dialogue-2c267dd6f54f7bb8e92f5b54c4a18b1a.tres"]
+
+[params]
+
+defaults=true

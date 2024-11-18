@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dksyo43ouc7pf"
+path="res://.godot/imported/Menu4.wav-44ee91c536e8290f5b84bd79b490c1cc.sample"
+
+[deps]
+
+source_file="res://art/tilesets/RMMV/Ninja Adventure - Asset Pack/Sounds/Menu/Menu4.wav"
+dest_files=["res://.godot/imported/Menu4.wav-44ee91c536e8290f5b84bd79b490c1cc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

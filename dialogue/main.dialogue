@@ -1,19 +1,29 @@
 ~ start
-Father: Assalamu Alaikum, my son. Are you ready for your journey? 
+set in_dialogue = true
+Father: Salam, my boy. Are you truly set on this journey? The road is long, and the dangers are many. Have you thought this through? 
 if apple_status == "has":
-	Ibn Battuta: I have an apple with me, father.
+	Ibn Battuta: I found an apple on that tree they just cut down.
 	- Give it to Father
 		set apple_status = "gave"
-		Ibn Battuta: Here you go, father. Please have it.
-		Father: Thank you, my son. A small token of kindness goes a long way.
+		Ibn Battuta: Here, Dad. You can have it.
+		Father: Thanks, son. A little kindness like this can mean a lot. 
+		Father: Here's a gift from me.
 		set gold += 2
 		set mis1_status = "Complete"
 	- Keep it
-		Ibn Battuta: I will keep it for the road ahead, father.
-		Father: That is wise, my son. You will need your strength for the journey.
+		Ibn Battuta: I’ll hang on to it, Dad. Might need it on the road.
+		Father: Fair enough. You’ll need your energy for the journey.
 elif apple_status == "gave":
-	Father: Thank you again for the apple, my son. I pray it symbolizes the generosity you will show on your travels.
+	Father: That apple was sweet, son. I hope you keep being this generous wherever you go.
 else:
-	Father: You should find some provisions for your journey. There is an orchard nearby that might have apples.
+	Father: You should grab some supplies for the trip. Check out the orchard—they just cut down a tree there, might still have some fruit.
+
+if talked == false:
+	Father: You are young, Muhammad. To travel alone without companion or caravan— is this not inviting hardship upon yourself?
+	Ibn Battuta: Hardship is the path to growth, father. Allah will guide my steps and protect me, just as He placed this desire in my soul.
+	Father (sighs): If this is truly what Allah wills for you, I will not stand in your way. But remember, your family’s prayers will always follow you. Do not let the trials of the journey turn your heart from Allah.
+	Ibn Battuta: I will carry your words with me, father, as I carry my faith. Your blessings are the provisions I need most.
+	set talked = true
 	
+set in_dialogue = false
 => END

@@ -1,0 +1,8 @@
+~ start
+set in_dialogue = true
+Khushqadam (Wazir): Ibn Battuta, the Sultan speaks highly of your knowledge and wisdom. Few men have traversed the lands as you have, from the Maghreb to the Malabar. Tell me, what insights do you bring from your travels that might aid our court?
+Ibn Battuta: My lord, I am but a humble traveler who has witnessed the splendor and trials of distant lands. From the disciplined courts of Cairo to the thriving ports of Malabar, I have learned that the strength of a kingdom lies in justice, unity, and the wisdom of its ruler.
+Khushqadam (Wazir): I must warn you, however, the Sultan's ambitions stretch far, and his gaze is sharp. Service here demands unwavering loyalty—and a steady hand against the storm of his whims.
+set mis3_status += 1
+set in_dialogue = false
+=> END

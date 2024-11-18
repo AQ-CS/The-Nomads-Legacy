@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ch8hj3g64fu87"
+path="res://.godot/imported/Hit5.wav-b932c07fc84ad626c549c4fe3145da0d.sample"
+
+[deps]
+
+source_file="res://art/tilesets/RMMV/Ninja Adventure - Asset Pack/Sounds/Game/Hit5.wav"
+dest_files=["res://.godot/imported/Hit5.wav-b932c07fc84ad626c549c4fe3145da0d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

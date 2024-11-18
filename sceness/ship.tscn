@@ -1,0 +1,153 @@
+[gd_scene load_steps=21 format=3 uid="uid://c805fyw5roxph"]
+
+[ext_resource type="Texture2D" uid="uid://c5owvi3w34sg8" path="res://art/ship/256.png" id="1_j48hq"]
+[ext_resource type="Script" path="res://script/ship.gd" id="1_tiq0g"]
+[ext_resource type="Texture2D" uid="uid://cst3rfiywglb0" path="res://art/characters/Ship Move.png" id="3_ucbkb"]
+[ext_resource type="Texture2D" uid="uid://dy38cn08f24xc" path="res://art/characters/wrek.png" id="4_e6pqf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4o5bf"]
+size = Vector2(233, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnqtk"]
+atlas = ExtResource("1_j48hq")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvond"]
+atlas = ExtResource("3_ucbkb")
+region = Rect2(0, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg4rb"]
+atlas = ExtResource("3_ucbkb")
+region = Rect2(258, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wxuom"]
+atlas = ExtResource("3_ucbkb")
+region = Rect2(0, 258, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y03it"]
+atlas = ExtResource("3_ucbkb")
+region = Rect2(258, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7cux"]
+atlas = ExtResource("3_ucbkb")
+region = Rect2(0, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ui851"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(0, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tkext"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(258, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vo2de"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(0, 258, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7nxw"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(258, 258, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_om010"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(516, 0, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ut72c"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(516, 258, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrnby"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(0, 516, 258, 258)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vie6"]
+atlas = ExtResource("4_e6pqf")
+region = Rect2(258, 516, 258, 258)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8uao6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnqtk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bvond")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg4rb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wxuom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y03it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7cux")
+}],
+"loop": true,
+"name": &"move",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ui851")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tkext")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vo2de")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u7nxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_om010")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ut72c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrnby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vie6")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"ship_wreck",
+"speed": 5.0
+}]
+
+[node name="ship" type="CharacterBody2D"]
+script = ExtResource("1_tiq0g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.5, 22)
+shape = SubResource("RectangleShape2D_4o5bf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8uao6")
+animation = &"ship_wreck"
+frame = 8
+frame_progress = 1.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(339, 15)
+zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 19
+limit_right = 7420
+limit_bottom = 650
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true

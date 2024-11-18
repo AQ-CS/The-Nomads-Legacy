@@ -1,0 +1,11 @@
+~ start
+set in_dialogue = true
+Ibn Battuta: The pilgrimage to the House of God is complete, but my heart stirs for more. The lands of Islam and beyond call to me. 
+Fellow Pilgrim: You’ve braved the trials of the journey, brother. Is this not enough? Will you not return home?
+Ibn Battuta: No, my soul yearns for more. The world is vast, and there is much to see.
+Fellow Pilgrim: May Allah guide your steps, wherever they may lead.
+set mis2_status = "complete"
+Ibn Battuta: I travel now not only for pilgrimage but for the love of discovery. Each land holds new wonders and stories to uncover.
+Fellow Pilgrim: Your heart is restless, brother. May your journey bring you wisdom and blessings.
+set in_dialogue = false
+=> END

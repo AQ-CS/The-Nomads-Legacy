@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://bodmrun8retaj"]
+
+[ext_resource type="Script" path="res://script/bouldertype_2.gd" id="1_m0r6l"]
+[ext_resource type="Texture2D" uid="uid://dd7e83nc5317m" path="res://art/objects/boulders.png" id="2_5xtfu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xgu0"]
+atlas = ExtResource("2_5xtfu")
+region = Rect2(0, 333, 435, 333)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wb3l5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xgu0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dlojm"]
+size = Vector2(52.2713, 45.5)
+
+[node name="bouldertype2" type="Area2D"]
+script = ExtResource("1_m0r6l")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+sprite_frames = SubResource("SpriteFrames_wb3l5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.49999, 1.25)
+scale = Vector2(1.01394, 1)
+shape = SubResource("RectangleShape2D_dlojm")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

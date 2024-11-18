@@ -1,0 +1,58 @@
+~ start
+set in_dialogue = true
+Spice Trader: Namaste, Welcome to my store!.
+Spice Trader: What would you like to do today?
+- Buy
+	Spice Trader: Buying! [[Wonderful|Great|Amazing]] Choice!
+	Spice Trader: What would you like to buy? 
+	- Spice
+		Spice Trader: Spices! Thats what Im known for!
+		Spice Trader: 1 Bag of Spice cost 1 gold pieces!
+		- Accept
+			if gold < 1:
+				Ibn Battuta: Looks like I dont have enough gold, maybe another time
+				Spice Trader: Thats alright! Come back again whenever you feel like!
+			elif gold >= 1:
+				Ibn Battuta: Sure I want 1 of your silk pieces
+				Spice Trader: Great trading with you! May Allah bless you!
+				set gold -= 1
+				set spices += 1
+		- Reject
+			Ibn Battuta: Maybe another time, Peace be upon you!
+			Spice Trader: Peace be upon you too!
+	- Silk
+		Spice Trader: Silk! You might be better of buying them from Morocco, but if you are in a hurry
+		Spice Trader: 1 Piece of Silk cost 3 gold pieces! 
+		- Accept
+			if gold < 3:
+				Ibn Battuta: Looks like I dont have enough gold, maybe another time
+				Spice Trader: Thats alright! Come back again whenever you feel like!
+			elif gold >= 3:
+				Ibn Battuta: Sure, I want 1 Piece of Silk please
+				Spice Trader: Great trading with you! May Allah bless you!
+				set gold -= 3
+				set silk += 1
+		- Reject
+			Ibn Battuta: Maybe another time, Peace be upon you!
+			Spice Trader: Peace be upon you too!
+	- Cancel
+		Spice Trader: Another time then!
+		
+- Sell
+	Spice Trader: Selling! 
+	Spice Trader: Sure thing, what do you have?
+	- Silk for 2 gold piece
+		if silk < 1:
+			Ibn Battuta: Looks like I don't have that to sell.
+			Spice Trader: No worries! Come back when you have something to trade.
+		elif silk >= 1:
+			Spice Trader: I accept your trade for 1 gold piece!
+			Ibn Battuta: Here you go, may your trade flourish!
+			Spice Trader: Thank you! May Allah bless your journey!
+			set silk -= 1
+			set gold += 2
+	- Cancel
+		Spice Trader: Another time then!
+- Cancel
+set in_dialogue = false
+=> END

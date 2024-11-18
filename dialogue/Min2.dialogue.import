@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://dlusyk2ou3xhy"
+path="res://.godot/imported/Min2.dialogue-aafb18606bcf697aa0b12e528fc52413.tres"
+
+[deps]
+
+source_file="res://dialogue/Min2.dialogue"
+dest_files=["res://.godot/imported/Min2.dialogue-aafb18606bcf697aa0b12e528fc52413.tres"]
+
+[params]
+
+defaults=true

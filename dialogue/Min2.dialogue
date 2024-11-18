@@ -1,0 +1,8 @@
+~ start
+set in_dialogue = true
+Ibn al-Zayyat (Vizier): Ah, the illustrious traveler! Your arrival stirs curiosity across the court. I am Ibn al-Zayyat, an old servant of the Sultan. Though the Sultan's temper is as fierce as a monsoon, his generosity knows no bounds when one proves worthy.
+Ibn Battuta: Your words honor me, Ibn al-Zayyat. It is true, the Sultan’s rule is vast, and his wisdom is a beacon for all who serve him. I will strive to bring fairness and integrity to the Sultan’s court, as his trust is a great responsibility.
+Ibn al-Zayyat (Vizier): Perhaps your tales will illuminate paths to lands we have yet to influence. Do not falter in your duties as qadi, for here, justice is both a shield and a test of one's mettle.
+set mis3_status += 1
+set in_dialogue = false
+=> END

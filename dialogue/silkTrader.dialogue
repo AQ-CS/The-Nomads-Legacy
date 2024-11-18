@@ -1,4 +1,6 @@
 ~ start
+set in_dialogue = true
+set mis2_status = "Complete"
 Silk Trader: [[Assalamu Alaikum|Salam|Marhaba]], Welcome to my store!.
 Silk Trader: What would you like to do today?
 - Buy
@@ -60,4 +62,5 @@ Silk Trader: What would you like to do today?
 			set gold += 2
 	- Cancel
 		Silk Trader: Another time then!
+set in_dialogue = false
 => END

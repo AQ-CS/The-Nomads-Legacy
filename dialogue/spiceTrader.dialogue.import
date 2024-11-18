@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_13"
+type="Resource"
+uid="uid://coyke4telf4id"
+path="res://.godot/imported/spiceTrader.dialogue-40b6769183f10d124f380913fdbfa7f1.tres"
+
+[deps]
+
+source_file="res://dialogue/spiceTrader.dialogue"
+dest_files=["res://.godot/imported/spiceTrader.dialogue-40b6769183f10d124f380913fdbfa7f1.tres"]
+
+[params]
+
+defaults=true

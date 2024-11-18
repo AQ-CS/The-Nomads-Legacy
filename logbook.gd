@@ -18,6 +18,7 @@ extends Area2D
 @onready var miss4Icon = $mission4
 @onready var miss5Icon = $mission5
 @onready var miss6Icon = $mission6
+@onready var miss7Icon = $mission7
 
 var is_open = false  # Tracks whether the book is open or not
 var current_page = 0  # Tracks the current page
@@ -42,8 +43,11 @@ func _ready():
 	miss4Icon.hide()
 	miss5Icon.hide()
 	miss6Icon.hide()
+	miss7Icon.hide()
 
 func _process(delta):
+	if State.in_dialogue == true:
+		return
 	if Input.is_action_just_pressed("ui_cancel"):  # Toggle visibility with ui_cancel
 		if visible:
 			current_page = 0
@@ -102,13 +106,34 @@ func update_pages():
 		rHead.text = "Missions"
 		rightPage.text = "    Give Father An Apple"
 		if State.mis1_status == "Complete":
-			rightPage.text += "\n\nTrade with Silk Trader Outside"
-			
+			rightPage.text += "\n    Trade with Silk Trader \n    Outside"
+			miss2Icon.show()
 			# Access the AnimatedSprite2D and play the "completed" animation
 			var miss1_sprite = miss1Icon.get_node("AnimatedSprite2D")
 			if miss1_sprite:
 				miss1_sprite.play("completed")
 			
+		if State.mis2_status == "Complete":
+			rightPage.text += "\n    Talk to Ministers"
+			miss3Icon.show()
+			# Access the AnimatedSprite2D and play the "completed" animation
+			var miss2_sprite = miss2Icon.get_node("AnimatedSprite2D")
+			if miss2_sprite:
+				miss2_sprite.play("completed")
+				
+		if State.mis3_status == 2:
+			rightPage.text += "\n    Talk with Sultan"
+			miss4Icon.show()
+			# Access the AnimatedSprite2D and play the "completed" animation
+			var miss3_sprite = miss3Icon.get_node("AnimatedSprite2D")
+			if miss3_sprite:
+				miss3_sprite.play("completed")
+				
+		if State.mis4_status == "Complete":
+			var miss3_sprite = miss3Icon.get_node("AnimatedSprite2D")
+			if miss3_sprite:
+				miss3_sprite.play("completed")
+
 	elif current_page == 2:
 		rightBtn.show()
 		goldIcon.hide()
@@ -121,10 +146,18 @@ func update_pages():
 		miss4Icon.hide()
 		miss5Icon.hide()
 		miss6Icon.hide()
-		lHead.text = "Page 3"
+		miss7Icon.hide()
+		lHead.text = "Travel Log"
 		rHead.text = "Page 4"
 		leftPage.text = ""
 		rightPage.text = ""
+		if global2.leavingMorocco == true:
+			leftPage.text += "I departed Tangier, driven \nby faith, to perform the \npilgrimage to Mecca."
+		if global2.visitedMecca == true:
+			leftPage.text += "\n\nAfter Mecca, my travels \ncarried me to distant lands \nin pursuit of knowledge \nand adventure."
+		if global2.visitedIndia == true:
+			leftPage.text += "\n\nI journeyed to India, lured \nby tales of its grandeur \nand wealth."
+		
 	elif current_page == 3:
 		goldIcon.hide()
 		silkIcon.hide()
@@ -137,6 +170,7 @@ func update_pages():
 		miss4Icon.hide()
 		miss5Icon.hide()
 		miss6Icon.hide()
+		miss7Icon.hide()
 		lHead.text = "Page 5"
 		rHead.text = "Page 6"
 		leftPage.text = ""
