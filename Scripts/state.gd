@@ -17,3 +17,5 @@ var mis5_status: String = "none"
 var mis6_status: String = "none"
 var mis7_status: String = "none"
 var mis8_status: String = "none"
+
+var riding_camel = false

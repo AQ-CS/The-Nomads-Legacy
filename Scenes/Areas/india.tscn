@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dcmjt2n0rum5b"]
+[gd_scene load_steps=31 format=3 uid="uid://dcmjt2n0rum5b"]
 
 [ext_resource type="Script" path="res://Scenes/india.gd" id="1_4iubr"]
 [ext_resource type="Texture2D" uid="uid://contwr8y5hem1" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/Interior/TilesetInterior.png" id="2_0428t"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dhyworjmwpd60" path="res://Scenes/Items/logbook.tscn" id="14_ubnl1"]
 [ext_resource type="FontFile" uid="uid://bt0a1mwu0stp4" path="res://Fonts/minecraft-font/MinecraftRegular-Bmg3.otf" id="15_yar0t"]
 [ext_resource type="AudioStream" uid="uid://x1au0bsif5wk" path="res://art/characters/Ninja Adventure - Asset Pack/Musics/27 - Chill.ogg" id="16_mxbmu"]
+[ext_resource type="PackedScene" uid="uid://c80qfm40iqb4k" path="res://Scenes/Actors/camel_playable.tscn" id="17_w4i01"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nqxws"]
 texture = ExtResource("2_0428t")
@@ -2786,7 +2787,7 @@ limit_right = 911
 limit_bottom = 1152
 
 [node name="Logbook" parent="Player/Camera2D" instance=ExtResource("14_ubnl1")]
-position = Vector2(4, 3)
+position = Vector2(1746, 164)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -26.0
@@ -2837,6 +2838,9 @@ shape = SubResource("RectangleShape2D_7qiyw")
 stream = ExtResource("16_mxbmu")
 volume_db = -12.0
 autoplay = true
+
+[node name="camel" parent="." instance=ExtResource("17_w4i01")]
+position = Vector2(-49, 300)
 
 [connection signal="body_entered" from="return" to="." method="_on_return_body_entered"]
 [connection signal="body_entered" from="Sultan" to="." method="_on_sultan_body_entered"]

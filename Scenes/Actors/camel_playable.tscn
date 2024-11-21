@@ -1,0 +1,113 @@
+[gd_scene load_steps=14 format=3 uid="uid://c80qfm40iqb4k"]
+
+[ext_resource type="Script" path="res://Scenes/Actors/camel_playable.gd" id="1_qems1"]
+[ext_resource type="Texture2D" uid="uid://de63xopd8na33" path="res://art/characters/camel v3.png" id="2_7iyl8"]
+[ext_resource type="Texture2D" uid="uid://dcl3j74rg1g7m" path="res://art/characters/camel v4.png" id="3_msvj3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wm11u"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(73, 0, 73, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nc3c"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(73, 64, 73, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4vkd"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(73, 128, 73, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2mnfv"]
+atlas = ExtResource("3_msvj3")
+region = Rect2(83, 128, 61, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hwwx"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(0, 0, 85, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sc6w4"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(0, 64, 85, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pemqg"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(0, 128, 85, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kevt"]
+atlas = ExtResource("2_7iyl8")
+region = Rect2(0, 192, 85, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8uao6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wm11u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nc3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4vkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4vkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4vkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4vkd")
+}],
+"loop": false,
+"name": &"camel_down",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2mnfv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hwwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sc6w4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pemqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kevt")
+}],
+"loop": true,
+"name": &"move",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xh18l"]
+radius = 56.0
+height = 170.0
+
+[node name="camel" type="Area2D"]
+script = ExtResource("1_qems1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -24)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_8uao6")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 17)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_xh18l")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -59.0
+offset_top = -43.0
+offset_right = 37.0
+offset_bottom = -20.0
+text = "[C] to mount"

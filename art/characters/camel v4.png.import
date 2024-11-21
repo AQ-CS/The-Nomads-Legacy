@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w6iejy1y8242"
-path="res://.godot/imported/camel.png-f48a14930afbe318952490277cdc55a2.ctex"
+uid="uid://dcl3j74rg1g7m"
+path="res://.godot/imported/camel v4.png-87f3468c38e511d4cc84f3402d6df3c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/characters/camel.png"
-dest_files=["res://.godot/imported/camel.png-f48a14930afbe318952490277cdc55a2.ctex"]
+source_file="res://art/characters/camel v4.png"
+dest_files=["res://.godot/imported/camel v4.png-87f3468c38e511d4cc84f3402d6df3c9.ctex"]
 
 [params]
 

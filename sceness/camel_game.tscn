@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://ugwrpjy28hku"]
 
-[ext_resource type="PackedScene" uid="uid://doxs5mqloja0k" path="res://sceness/camel.tscn" id="1_bu2lo"]
+[ext_resource type="PackedScene" uid="uid://doxs5mqloja0k" path="res://Scenes/Actors/camel.tscn" id="1_bu2lo"]
 [ext_resource type="Script" path="res://sceness/camel_game.gd" id="1_gm6qh"]
 [ext_resource type="Texture2D" uid="uid://d3tlctuyuv68j" path="res://art/objects/objects.png" id="2_ur4eh"]
 [ext_resource type="Texture2D" uid="uid://cwvnhqdedqeq5" path="res://art/objects/chest_01.png" id="3_qer81"]
