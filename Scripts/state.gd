@@ -19,3 +19,6 @@ var mis7_status: String = "none"
 var mis8_status: String = "none"
 
 var riding_camel = false
+
+var playerX = 0
+var playerY = 0

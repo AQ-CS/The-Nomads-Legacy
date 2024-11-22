@@ -12,3 +12,4 @@ func change_scene():
 	if global2.goingIndia == true:
 		get_tree().change_scene_to_file("res://Scenes/Areas/india.tscn")
 		global2.changeBack()
+		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bagclnfcq17kl"]
+[gd_scene load_steps=37 format=3 uid="uid://bagclnfcq17kl"]
 
 [ext_resource type="Script" path="res://Scripts/town.gd" id="1_8f2by"]
 [ext_resource type="Texture2D" uid="uid://bmjyqquldfdun" path="res://Ninja Adventure - Asset Pack/Backgrounds/Tilesets/TilesetWater.png" id="2_ssy8p"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://c1ntl28fmo7dd" path="res://Action/Actionable.tscn" id="17_jv2ap"]
 [ext_resource type="Resource" uid="uid://dqbgyg7mqrvgv" path="res://dialogue/silkTrader.dialogue" id="18_7p41c"]
 [ext_resource type="AudioStream" uid="uid://bdga0h1cba8kv" path="res://art/characters/Ninja Adventure - Asset Pack/Musics/4 - Village.ogg" id="19_yaij1"]
+[ext_resource type="PackedScene" uid="uid://c80qfm40iqb4k" path="res://Scenes/Actors/camel_playable.tscn" id="20_4k81i"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i65cr"]
 texture = ExtResource("2_ssy8p")
@@ -2619,6 +2620,9 @@ layer = 50
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("19_yaij1")
 autoplay = true
+
+[node name="camel" parent="." instance=ExtResource("20_4k81i")]
+position = Vector2(-956, 314)
 
 [connection signal="body_entered" from="inHouse" to="." method="_on_house_body_entered"]
 [connection signal="body_entered" from="indiaBoat" to="." method="_on_boat_body_enter"]

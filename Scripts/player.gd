@@ -16,7 +16,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("ui_mount"):
 		if State.riding_camel:
 			State.riding_camel = false
-			camel.global_position = global_position  # Place the camel at the player's position
+			camel.global_position = global_position  # Place the scamel at the player's position
 			camel.show()  # Make the camel visible again
 	
 	if Input.is_action_just_pressed("ui_cancel") and clicks == 0:
